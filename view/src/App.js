@@ -1,6 +1,6 @@
 import React, {useState, useEffect } from "react";
 
-const Nosotros = () => {
+const App = () => {
   
   const [dato, setDatos] = React.useState([])
  
@@ -19,7 +19,7 @@ const Nosotros = () => {
 
   return(
     <div>
-      <h1> Nosotros</h1>
+      <h1> Estado de los sensores en tiempo real</h1>
        <ul>
          {
             dato.map(item => (
@@ -35,4 +35,4 @@ const Nosotros = () => {
   )
 }
 
-export default Nosotros;
+export default App;
