@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const Nosotros = () => {
+  
+  const [dato, setDatos] = React.useState([])
+ 
+  React.useEffect(() => {
+    //console.log('useEffect')
+    obtenerDatos()
+
+  }, []) 
+
+  const obtenerDatos =  async () =>{
+     const data = await fetch('https://my-json-server.typicode.com/ijrios/prueba/sensores')
+     const datos = await data.json()
+     console.log(datos)
+     setDatos(datos)
+  }
+
+  return(
+    <div>
+      <h1> Nosotros</h1>
+       <ul>
+         {
+            dato.map(item => (
+              <li key ="item.id">{item.title} - {item.value}</li>
+
+            ))
+         }
+       
+       </ul>
+         
     </div>
-  );
+
+  )
 }
 
-export default App;
+export default Nosotros;
