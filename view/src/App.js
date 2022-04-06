@@ -1,5 +1,4 @@
 import React, {useState, useEffect } from "react";
-import exerciseImg from './images/exercise.png'
 import './styles/maincss.css'
 
 const App = () => {
@@ -19,22 +18,31 @@ const App = () => {
      console.log(datos)
      setDatos(datos)
   }
-  render() {
+  
   return(
 <center>
-<div>
-      <h1> Estado de los sensores en tiempo real</h1>
-       <ul>
+<br />
+<div className="title">
+<h1> Estado de los sensores en tiempo real</h1>   
+</div>
+
+<div className="app mx-auto App-container">
+<div className="app-body">
+    <div className="row center">
+        <div className="col-6 App-Info">
+        <ul>
          {
             dato.map(item => (
-              <li key ="item.id">{item.title} - {item.value}</li>
+              <p key ="item.id">{item.title} - {item.value}</p>
             ))
          }
        </ul>
+     </div>
     </div>
-    </center>
+</div>
+</div>
+</center>
   )
- }
 }
 
 export default App;
