@@ -26,26 +26,27 @@ const App = () => {
     <br />
     <br />
     <div className="title">
-    <h1> Estado de los sensores en tiempo real</h1>   
+    <h1> Estado de los sensores</h1>   
     </div>
-
-    <div className="app mx-auto App-container">
-      <div className="app-body">
-       <div className="row center">
-          <div className="col-6 App-Info">
-            <ul>
-               <br />
-                  {
-                  dato.map(item => (
-                  <p key ="item.id">{item.title}: {item.value}</p>
-              
-                  ))
-                  }
-                <br />
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div className="App">
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Titulo</th>
+          <th>Valor</th>
+          <th>Fecha</th>
+        </tr>
+        {dato.map((val, key) => {
+          return (
+            <tr key={key}>
+              <td>{val.id}</td>
+              <td>{val.title}</td>
+              <td>{val.value}</td>
+              <td>{val.fecha}</td>
+            </tr>
+          )
+        })}
+      </table>
     </div>
   </center>
   )

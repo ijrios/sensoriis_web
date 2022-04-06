@@ -8,11 +8,6 @@
     font-family: Arial;
 }
 
-.app {
-    border: none;
-    border-radius: 8px;
-    background: url('../images/circles.png') no-repeat, linear-gradient(to right, #cccccc, #617BFB);
-}
 .App-container{
     max-height: 140px;
     max-width: 520px;
@@ -27,3 +22,28 @@
     font-family: Arial;
     color: black;
 }
+
+
+.App {
+    width: 90%;
+    height: 30vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+    
+  table {
+    border: 2px solid forestgreen;
+    width: 400px;
+    height: 100px;
+    background: url('../images/circles.png') no-repeat, linear-gradient(to right, #cccccc, forestgreen);
+    border-radius: 8px
+  }
+    
+  th {
+    border-bottom: 1px solid black;
+  }
+    
+  td {
+    text-align: center;
+  }
