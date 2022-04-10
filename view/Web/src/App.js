@@ -1,55 +1,95 @@
-import React, {useState, useEffect } from "react";
-import './styles/maincss.css'
-
-const App = () => {
-  
-  const [dato, setDatos] = React.useState([])
- 
-  React.useEffect(() => {
-    //console.log('useEffect')
-    obtenerDatos()
-
-  }, []) 
-
-  const obtenerDatos =  async () =>{
-    // Se cambia por la URL que llega de la nube
-     const data = await fetch('https://my-json-server.typicode.com/ijrios/prueba/sensores')
-     const datos = await data.json()
-     console.log(datos)
-     setDatos(datos)
+import React, { Component } from "react";
+import ReactTable from "react-table-6";
+import "react-table-6/react-table.css";
+import axios from "axios";
+class App extends Component {
+  constructor(props) {
+    super(props);
+    //Datos iniciales de la API
+    this.state = {
+      data: []
+    };
+    axios.get("https://my-json-server.typicode.com/ijrios/prueba/sensores").then(res => {
+      //Actualizar la tabla de reacciones
+      this.setState({
+        posts: res.data,
+        data: res.data.slice(0, 2),
+        pages: res.data.length / 2,
+        loading: false
+      });
+    });
   }
-  
-  return(
-  <center>
-    <br />
-    <br />
-    <br />
-    <br />
-    <div className="title">
-    <h1> Estado de los sensores</h1>   
-    </div>
-    <div className="App">
-      <table>
-        <tr>
-          <th>Id</th>
-          <th>Titulo</th>
-          <th>Valor</th>
-          <th>Fecha</th>
-        </tr>
-        {dato.map((val, key) => {
-          return (
-            <tr key={key}>
-              <td>{val.id}</td>
-              <td>{val.title}</td>
-              <td>{val.value}</td>
-              <td>{val.fecha}</td>
-            </tr>
-          )
-        })}
-      </table>
-    </div>
-  </center>
-  )
+  render() {
+    const columns = [
+      {
+        Header: "Sensor",
+        accessor: "title",
+        style: {
+          textAlign: "center"
+        },
+        width: 100,
+        maxWidth: 100,
+        minWidth: 100
+      },
+      {
+        Header: "Valor",
+        accessor: "value",
+        style: {
+          textAlign: "center"
+        },
+        width: 100,
+        maxWidth: 100,
+        minWidth: 100
+      },
+      {
+        Header: "Signo",
+        accessor: "signo",
+        style: {
+          textAlign: "center"
+        },
+        width: 100,
+        maxWidth: 100,
+        minWidth: 100
+      },{
+        Header: "Fecha",
+        accessor: "fecha",
+        style: {
+          textAlign: "center"
+        },
+        width: 100,
+        maxWidth: 100,
+        minWidth: 100
+      }
+    ];
+    return (
+      <center>
+      <ReactTable className="table"
+        columns={columns}
+        data={this.state.data}
+        pages={this.state.pages}
+        loading={this.state.loading}
+        filterable
+        onPageChange={pageIndex => {
+          let pagesize = 2;
+          let low = pageIndex * pagesize;
+          let high = pageIndex * pagesize + pagesize;
+          axios.get("https://my-json-server.typicode.com/ijrios/prueba/sensores").then(res => {
+            // Actualiza react-table
+            this.setState({
+              posts: res.data,
+              data: res.data.slice(low, high),
+              pages: res.data.pages,
+              loading: false
+            });
+          });
+        }}
+        defaultPageSize={2}
+        noDataText={"Loading..."}
+        manual //forma a React Table que manejará la clasificación y la paginación del lado del servidor
+      />
+      </center>
+    );
   }
+}
 
 export default App;
