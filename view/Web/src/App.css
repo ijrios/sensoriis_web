@@ -27,3 +27,11 @@
 .App-link {
   color: #61dafb;
 }
+
+.App-cuadro{
+  width: 58%;
+  margin: 0 auto;
+  padding: 30px 33px 67px;
+  border-top: 6px solid #00c3ff;
+  box-shadow: 0px 35px 44px -22px rgba(0, 0, 0, 0.72);
+}
