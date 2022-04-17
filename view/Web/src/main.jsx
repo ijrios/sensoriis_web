@@ -12,6 +12,7 @@ const Table = tw.table`
 
 const TableHead = tw.thead`
   p-2
+  bg-green-500
 `;
 
 const TableRow = tw.tr`
@@ -32,6 +33,7 @@ const TableData = tw.td`
 border
 border-green-500
 p-5
+bg-green-100
 `;
 
 export function Sensores(props) {
@@ -102,11 +104,7 @@ export function Sensores(props) {
 
   return (
     <>
-      <GlobalFilter
-        preGlobalFilteredRows={preGlobalFilteredRows}
-        setGlobalFilter={setGlobalFilter}
-        globalFilter={state.globalFilter}
-      />
+     <br/>
       <Table {...getTableProps()}>
         <TableHead>
           {headerGroups.map((headerGroup) => (

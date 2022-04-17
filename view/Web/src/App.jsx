@@ -17,14 +17,15 @@ const AppContainer = tw.div`
 `;
 
 const Title = tw.h1`
-  text-2xl
+  text-4xl
   font-extrabold
 `;
 
 function App() {
   return (
     <AppContainer>
-      <Title>Sensores</Title>
+      <br/><br/><br/><br/><br/><br/>
+      <Title>S E N S O R E S</Title>
       <Sensores />
     </AppContainer>
   );
