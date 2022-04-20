@@ -14,14 +14,15 @@ const AppContainer = tw.div`
   pb-10
   pl-10
   pr-10
-  
+  shadow-lg
 `;
 
 const Title = tw.h1`
   text-4xl
   font-extrabold
-  shadow-lg
+  
 `;
+
 
 function App() {
   return (
