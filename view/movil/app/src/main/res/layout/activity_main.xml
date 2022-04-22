@@ -6,24 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SENSORES"
-        android:textSize="36sp"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="86dp"
-        tools:ignore="MissingConstraints" />
-
     <Button
         android:id="@+id/btnEnviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Temperatura"
         tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="515dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="506dp" />
 
     <EditText
         android:id="@+id/txtid"
@@ -31,32 +20,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="Id"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="200dp"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/txttitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Sensor"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="270dp"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/txtvalor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Valor"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="344dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="156dp" />
 
     <EditText
         android:id="@+id/txtfecha"
@@ -64,18 +31,31 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="Fecha"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="413dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="412dp" />
 
-    <Button
-        android:id="@+id/btnEnviar2"
-        android:layout_width="123dp"
-        android:layout_height="46dp"
-        android:text="Humedad"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="572dp"
-        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/txtvalor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Valor"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="324dp" />
+
+    <EditText
+        android:id="@+id/txttitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Sensor"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="240dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

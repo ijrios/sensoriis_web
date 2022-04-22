@@ -1,13 +1,12 @@
 package udem.edu.com.sensores;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -18,13 +17,10 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class MainActivity extends AppCompatActivity {
 
     EditText txtid, txttitulo, txtvalor, txtfecha;
-    Button btnEnviar;
+    Button btnEnviar, btnEnviar2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 LeerTemperatura();
-                LeerHumedad();
             }
         });
 
@@ -48,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void LeerTemperatura() {
 
-        String url = "https://my-json-server.typicode.com/ijrios/prueba/1";
+        String url = "https://my-json-server.typicode.com/ijrios/prueba/sensores/1";
 
         StringRequest postResquest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -59,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                     txttitulo.setText(jsonObject.getString("title"));
                     txtvalor.setText(jsonObject.getInt("value"));
                     txtfecha.setText(jsonObject.getString("fecha"));
-
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -77,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void LeerHumedad() {
 
-        String url = "https://my-json-server.typicode.com/ijrios/prueba/2";
+        String url = "https://my-json-server.typicode.com/ijrios/prueba/sensores/2";
 
         StringRequest postResquest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override

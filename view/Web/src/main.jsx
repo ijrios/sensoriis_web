@@ -41,34 +41,31 @@ export function Sensores(props) {
 
   const fetchSensores = async () => {
     const response = await axios
-      .get("https://my-json-server.typicode.com/ijrios/prueba/sensores")
+      .get("https://my-json-server.typicode.com/ijrios/prueba2/sensores")
       .catch((err) => console.log(err));
 
     if (response) {
-      const sensores = response.data;
+      const sensores = [response.data];
 
       console.log("Sensores: ", sensores);
       setSensores(sensores);
     }
+
   };
 
   const columns = useMemo(
     () => [
       {
         Header: "Id",
-        accessor: "id",
+        accessor: "Sensor_Id",
       },
       {
-        Header: "Sensor",
-        accessor: "title",
+        Header: "Temperatura",
+        accessor: d => `${d.Temperature} ${"° C"}`,
       },
       {
-        Header: "Valor",
-        accessor: d => `${d.value} ${d.signo}`
-      },
-      {
-        Header: "Fecha",
-        accessor: "fecha",
+        Header: "Humedad",
+        accessor: d => `${d.Humidity} ${"%"}`,
       },
     ],
     []
