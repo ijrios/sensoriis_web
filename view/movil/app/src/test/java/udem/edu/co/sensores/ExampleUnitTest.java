@@ -1,4 +1,4 @@
-package udem.edu.com.sensores;
+package udem.edu.co.sensores;
 
 import org.junit.Test;
 
