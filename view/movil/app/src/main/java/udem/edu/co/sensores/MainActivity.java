@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void LeerWs() {
 
-        String url = "https://my-json-server.typicode.com/ijrios/prueba2/sensores";
+        String url = "https://my-json-server.typicode.com/ijrios/prueba/sensores";
 
         StringRequest postResquest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
