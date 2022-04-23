@@ -12,17 +12,17 @@ const Table = tw.table`
 
 const TableHead = tw.thead`
   p-2
-  bg-green-500
+  bg-gray-500
 `;
 
 const TableRow = tw.tr`
 border
-border-green-500
+border-gray-500
 `;
 
 const TableHeader = tw.th`
 border
-border-green-500
+border-gray-500
 p-2
 `;
 
@@ -31,9 +31,9 @@ const TableBody = tw.tbody`
 
 const TableData = tw.td`
 border
-border-green-500
+border-gray-500
 p-5
-bg-green-100
+bg-gray-100
 `;
 
 export function Sensores(props) {
