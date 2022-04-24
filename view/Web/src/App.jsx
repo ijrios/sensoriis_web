@@ -16,17 +16,22 @@ pt-6
 pb-10
 pl-10
 pr-10
-shadow-lg
+`;
+
+const P = tw.h1`
+text-base
+font-sans	
 `;
 
 function App() {
   return (
     <Router>
       <Navbar />
+      <br/><br/>
       <Contenedor>
       <Sensores />
       <br/><br/>
-      <p>Esta aplicación muestra el estado real de los sensores enviados desde Raspberry Pi</p>
+      <P>Esta aplicación muestra el estado real de los sensores enviados como un archivo JSON desde Raspberry Pi con <b>Api rest</b></P>
       </Contenedor>
     </Router>
     

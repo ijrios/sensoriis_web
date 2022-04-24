@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Nav,
   NavLink,
-  Bars,
   NavMenu
 } from './NavbarElements';
 import tw from "twin.macro";

@@ -8,20 +8,22 @@ const Table = tw.table`
   table-fixed
   text-base
   text-gray-900
+  border-none
 `;
 
 const TableHead = tw.thead`
   p-2
   bg-gray-500
+  border-none
 `;
 
 const TableRow = tw.tr`
-border
+border-none
 border-gray-500
 `;
 
 const TableHeader = tw.th`
-border
+border-none
 border-gray-500
 p-2
 `;
@@ -30,7 +32,7 @@ const TableBody = tw.tbody`
 `;
 
 const TableData = tw.td`
-border
+border-none
 border-gray-500
 p-5
 bg-gray-100
@@ -41,7 +43,7 @@ export function Sensores(props) {
 
   const fetchSensores = async () => {
     const response = await axios
-      .get("https://my-json-server.typicode.com/ijrios/prueba2/sensores")
+      .get("http://3.86.216.65:81/api/data")
       .catch((err) => console.log(err));
 
     if (response) {
@@ -137,5 +139,6 @@ export function Sensores(props) {
         </TableBody>
       </Table>
     </>
+    
   );
 }
