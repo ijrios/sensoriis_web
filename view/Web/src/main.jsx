@@ -43,8 +43,8 @@ export function Sensores(props) {
 
   const fetchSensores = async () => {
     const response = await axios
-      .get("http://3.86.216.65:81/api/data")
-      .catch((err) => console.log(err));
+      .get("http://34.228.77.116/api/data")
+      .catch((err) => console.log(err.response.data));
 
     if (response) {
       const sensores = [response.data];
@@ -63,11 +63,11 @@ export function Sensores(props) {
       },
       {
         Header: "Temperatura",
-        accessor: d => `${d.Temperature} ${"° C"}`,
+        accessor: d => `${d.Temperature.substring(0,5)} ${"° C"}`,
       },
       {
         Header: "Humedad",
-        accessor: d => `${d.Humidity} ${"%"}`,
+        accessor: d => `${d.Humidity.substring(0,5)} ${"%"}`,
       },
     ],
     []

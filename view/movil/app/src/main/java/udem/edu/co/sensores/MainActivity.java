@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void LeerWs() {
 
-        String url = "https://my-json-server.typicode.com/ijrios/prueba/sensores";
+        String url = "http://34.228.77.116/api/data";
 
         StringRequest postResquest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     txtid.setText(jsonObject.getString("Sensor_Id"));
                     String temp = jsonObject.getString("Temperature");
-                    txtTemp.setText(temp + " ° C");
+                    txtTemp.setText(temp.substring(0,5) + " ° C");
                     String hum = jsonObject.getString("Humidity");
-                    txtHum.setText(hum + " %");
+                    txtHum.setText(hum.substring(0,5) + " %");
 
                 } catch (JSONException e) {
                     e.printStackTrace();
