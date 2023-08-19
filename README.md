@@ -2,15 +2,11 @@ El proyecto Sensoriis Web es una plataforma integral diseñada para recopilar, v
 
 Características Clave:
 
-Recopilación de Datos en Tiempo Real: Sensoriis Web se conecta de manera fluida con una variedad de sensores, como sensores climáticos, de monitoreo ambiental, industriales y más. Los datos recopilados se actualizan en tiempo real, lo que permite a los usuarios estar al tanto de las condiciones actuales.
+Recopilación de Datos en Tiempo Real: Sensoriis Web se conecta de manera fluida con una variedad de sensores, como sensores climáticos. Los datos recopilados se actualizan en tiempo real, lo que permite a los usuarios estar al tanto de las condiciones actuales.
 
 Visualización Intuitiva: La plataforma ofrece una interfaz de visualización intuitiva que presenta los datos en forma de gráficos interactivos, tablas y mapas. Estos elementos visuales facilitan la comprensión rápida de las tendencias y patrones emergentes.
 
-Análisis de Datos: Sensoriis Web no solo presenta los datos, sino que también ofrece herramientas analíticas básicas para examinar tendencias a largo plazo, correlaciones entre diferentes sensores y eventos inusuales. Esto permite a los usuarios tomar decisiones informadas basadas en la información proporcionada.
-
 Personalización y Configuración: Los usuarios pueden personalizar la configuración de los sensores, ajustar los umbrales de alerta y definir preferencias visuales según sus necesidades. Esto garantiza una experiencia adaptada a cada caso de uso específico.
-
-Alertas en Tiempo Real: La plataforma permite la configuración de alertas automatizadas que notifican a los usuarios cuando los datos del sensor superan ciertos umbrales o cuando ocurren eventos importantes. Esto ayuda a tomar medidas inmediatas en situaciones críticas.
 
 Compatibilidad Móvil: Sensoriis Web es completamente compatible con dispositivos móviles, lo que permite a los usuarios acceder a los datos y recibir alertas desde cualquier lugar y en cualquier momento.
 
